@@ -1,5 +1,8 @@
+using RefactorThis.Domain.Entities;
+using RefactorThis.Domain.Repositories;
+
 namespace RefactorThis.Persistence {
-	public class InvoiceRepository
+	public class InvoiceRepository: IInvoiceRepository
 	{
 		private Invoice _invoice;
 
@@ -13,7 +16,7 @@ namespace RefactorThis.Persistence {
 			//saves the invoice to the database
 		}
 
-		public void Add( Invoice invoice )
+		public void AddInvoice( Invoice invoice )
 		{
 			_invoice = invoice;
 		}
